@@ -1,0 +1,298 @@
+/* Mobile first */
+
+/* Reset CSS */
+body {
+    margin: 0px;
+    font: inherit;
+    height: 100vh;
+}
+
+#app {
+    height: 100%;
+    font-family: Outfit,Avenir,Helvetica,Arial,sans-serif;
+}
+
+#jeu {
+    height: 100%;
+    background-color: #0e0e0f;
+}
+
+header {
+    /* background-color: lightblue; */
+    background-color: #1d1d20;
+    height: 60px;
+}
+
+main {
+    /* background-color: lightcoral; */
+    height: calc(100% - 60px);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#header__container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    padding: 0px 10px;
+    max-width: 820px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#header__container > div {
+    height: 100%;
+}
+
+#header__gauche {
+    width: 70px;
+    /* background-color: lightgray; */
+}
+
+#header__centre {
+    width: calc(100% - 140px);
+    /* background-color: lightgreen; */
+}
+
+#titre_jeu {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lettre {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 0 3px; */
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 4px;
+    text-transform: uppercase;
+    color: #fff;
+    /* background-color: lightcoral; */
+}
+
+.lettre.correct {
+    background-color: #3eaa42;
+}
+
+.lettre.partiel {
+    background-color: #cd8729;
+}
+
+.lettre.incorrect {
+    background-color: #3a3a3c;
+}
+
+.espace {
+    width: 14px;
+}
+
+#header__droit {
+    width: 70px;
+    /* background-color: lightgray; */
+}
+
+.header__btn_container {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+}
+
+.header__btn {
+    width: 32px;
+    height: 32px;
+    /* background-color: lightgoldenrodyellow; */
+    background-color: #3a3a3c;
+    border-radius: 5px;
+    border-bottom: 2px solid #2b2b2b;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    height: 13px;
+}
+
+#container_grille {
+    height: 70%;
+    display: flex;
+    align-items: center;
+}
+
+#grille {
+    /* background-color: lightcyan; */
+    width: 350px;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    /* padding: 20px 0px; */
+}
+
+.tentative {
+    display: flex;
+    justify-content: center;
+}
+
+.lettre_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #2f2f2f;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin: 4px;
+    /* background-color: lightseagreen; */
+}
+
+.lettre_container > .lettre {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 32px;
+}
+
+.lettre_container.selected {
+    border-color: #73adff;
+}
+
+.lettre_container.correct {
+    background-color: #3eaa42 !important;
+    border-color: #3eaa42 !important;
+}
+
+.lettre_container.partiel {
+    background-color: #cd8729;
+    border-color: #cd8729;
+}
+
+.lettre_container.incorrect {
+    background-color: #3a3a3c;
+    border-color: #3a3a3c;
+}
+
+#container_clavier {
+    /* background-color: lightseagreen; */
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#clavier {
+    /* background-color: lightgoldenrodyellow; */
+    height: -webkit-fill-available;
+    max-height: 400px;
+}
+
+.clavier__ligne {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.clavier__touche {
+    width: 34px;
+    height: 46px;
+    cursor: pointer;
+    margin: 2px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    background: #636363;
+    border-radius: 6px;
+    border: none;
+    border-bottom: 2px solid #4d4d4d;
+}
+
+.touche--big {
+    width: 72px;
+}
+
+/* Mobile rotated */
+@media screen and (max-height: 400px) {
+    #grille {
+        height: -webkit-fill-available;
+        padding: 10px 0px;
+    }
+
+    .tentative {
+        justify-content: center;
+    }
+
+    .lettre_container {
+        width: 35px;
+        height: 35px;
+    }
+
+    .lettre_container > .lettre {
+        font-size: 22px;
+    }
+
+    #clavier {
+        height: -webkit-fill-available;
+    }
+
+    /* Solution 1 : rendre les touches plus petites */
+
+    /* .clavier__touche {
+        width: 20px;
+        height: 20px;
+        font-size: 14px;
+    }
+    
+    .clavier__touche.touche--big {
+        width: 44px;
+    }
+
+    .clavier__touche > img {
+        width: 14px;
+    } */
+
+    /* --------------------------------------------- */
+
+    /* Solution 2 : ajouter un scroll vertical */
+    #jeu {
+        overflow: scroll;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 900px) {
+    #grille > .tentative > .lettre_container {
+        width: 62px;
+        height: 62px;
+    }
+
+    .clavier__touche {
+        width: 43px;
+        font-size: 22px;
+    }
+
+    .clavier__touche.touche--big {
+        width: 90px;
+    }
+}
+
+/* Tablette */
+@media screen and (max-height: 900px) and (min-width: 900px) {
+    #jeu {
+        overflow: scroll;
+    }
+}

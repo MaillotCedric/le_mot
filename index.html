@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Wordle</title>
+        <link rel="icon" type="image/x-icon" href="./images/wordle_favicon--32x32.png">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div id="app">
+            <div id="jeu">
+                <header>
+                    <div id="header__container">
+                        <div id="header__gauche" class="header__btn_container">
+                            <!-- bouton archives -->
+                            <div class="header__btn">
+                                <img src="./images/archive.svg" alt="icone archive" class="icon">
+                            </div>
+                            <!-- bouton statistiques -->
+                            <div class="header__btn">
+                                <img src="./images/stats.svg" alt="icone stats" class="icon">
+                            </div>
+                        </div>
+                        <div id="header__centre">
+                            <div id="titre_jeu">
+                                <div class="lettre correct">L</div>
+                                <div class="lettre">E</div>
+                                <div class="espace"></div>
+                                <div class="lettre partiel">M</div>
+                                <div class="lettre">O</div>
+                                <div class="lettre">T</div>
+                            </div>
+                        </div>
+                        <div id="header__droit" class="header__btn_container">
+                            <!-- bouton aide -->
+                            <div class="header__btn">
+                                <img src="./images/help.svg" alt="icone help" class="icon">
+                            </div>
+                            <!-- bouton paramètres -->
+                            <div class="header__btn">
+                                <img src="./images/settings.svg" alt="icone settings" class="icon">
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <main>
+                    <div id="container_grille"> 
+                        <div id="grille"></div>
+                    </div>
+                    <div id="container_clavier">
+                        <div id="clavier">
+                            <div class="clavier__ligne">
+                                <button id="touche_A" class="clavier__touche lettre_container">A</button>
+                                <button id="touche_Z" class="clavier__touche lettre_container">Z</button>
+                                <button id="touche_E" class="clavier__touche lettre_container">E</button>
+                                <button id="touche_R" class="clavier__touche lettre_container">R</button>
+                                <button id="touche_T" class="clavier__touche lettre_container">T</button>
+                                <button id="touche_Y" class="clavier__touche lettre_container">Y</button>
+                                <button id="touche_U" class="clavier__touche lettre_container">U</button>
+                                <button id="touche_I" class="clavier__touche lettre_container">I</button>
+                                <button id="touche_O" class="clavier__touche lettre_container">O</button>
+                                <button id="touche_P" class="clavier__touche lettre_container">P</button>
+                            </div>
+                            <div class="clavier__ligne">
+                                <button id="touche_Q" class="clavier__touche lettre_container">Q</button>
+                                <button id="touche_S" class="clavier__touche lettre_container">S</button>
+                                <button id="touche_D" class="clavier__touche lettre_container">D</button>
+                                <button id="touche_F" class="clavier__touche lettre_container">F</button>
+                                <button id="touche_G" class="clavier__touche lettre_container">G</button>
+                                <button id="touche_H" class="clavier__touche lettre_container">H</button>
+                                <button id="touche_J" class="clavier__touche lettre_container">J</button>
+                                <button id="touche_K" class="clavier__touche lettre_container">K</button>
+                                <button id="touche_L" class="clavier__touche lettre_container">L</button>
+                                <button id="touche_M" class="clavier__touche lettre_container">M</button>
+                            </div>
+                            <div class="clavier__ligne">
+                                <button id="touche_entrer" class="clavier__touche lettre_container touche--big">
+                                    <img id="touche_entrer--img" src="./images/entrer.svg" alt="icon entrer" class="icon">
+                                </button>
+                                <button id="touche_W" class="clavier__touche lettre_container">W</button>
+                                <button id="touche_X" class="clavier__touche lettre_container">X</button>
+                                <button id="touche_C" class="clavier__touche lettre_container">C</button>
+                                <button id="touche_V" class="clavier__touche lettre_container">V</button>
+                                <button id="touche_B" class="clavier__touche lettre_container">B</button>
+                                <button id="touche_N" class="clavier__touche lettre_container">N</button>
+                                <button id="touche_supprimer" class="clavier__touche lettre_container touche--big">
+                                    <img id="touche_supprimer--img" src="./images/suppr.svg" alt="icon suppr" class="icon">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <script src="./scripts/outils.js"></script>
+        <script src="./scripts/validation_lettres.js"></script>
+        <script src="./scripts/dom.js"></script>
+        <script src="./scripts/interactions.js"></script>
+        <script src="./scripts/etats.js"></script>
+        <script src="./scripts/actions.js"></script>
+        <script src="./scripts/main.js"></script>
+    </body>
+</html>
